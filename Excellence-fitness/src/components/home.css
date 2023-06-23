@@ -1,0 +1,62 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.protein{
+  align-items: left;
+}
+.logo{
+    margin:0px;
+    padding-top:30%;
+    padding-left:5%;
+    height:15%;
+    width:40%;
+    top:40%;
+  }
+  .bg-image{
+    margin:0px;
+    padding:0px;
+    height:400px;
+    width:100%;
+  }
+  .logo-word{
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+    width:100%;
+    color:#E8E8E8;
+    opacity: .9;
+    font-size:xx-large;
+  }
+.box1{
+    object-fit: cover;
+    /* background-attachment: fixed; */
+    margin:0px;
+    padding:20%;
+    height:570px;
+    justify-content: center;
+    width:100%;
+    background-position: center center;
+    /* background-image:url("/images/body.jpg"); */
+    background-size: cover;
+}
+.home_button{
+    border:none;
+    background-color: black;
+    color:black;
+    font-size: xx-large;
+    opacity: .8;
+    width:40%;
+    height:50px;
+    font-family: 'Lobster', cursive;
+    border-radius: 20px;;
+}
+.home_button:hover{
+    opacity: 1;
+    
+}
+.gym_card:hover{
+   background-color:#008080;
+} 
+.gym_card Text:hover{
+  color:white;
+}
