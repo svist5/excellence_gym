@@ -14,7 +14,7 @@ import Test from "./test";
 const Home=()=>{
 
     const data_get=async()=>{
-        const res=await fetch("http://localhost:3000",{
+        const res=await fetch("http://localhost:3000/auth",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

@@ -48,7 +48,7 @@ app.post("/api/user/login",async(req,res)=>{
       console.log("logged in");
       const token=generateToken(member._id);
       // res.cookie('SiyaRam', "Radharani_ki_jai", { maxAge: 3600000 });
-      res.cookie('Hare Krishnaa Hare Ramaa', "HareKrishna", { 
+      res.cookie('Haribol', token, { 
         httpOnly: true, // cookie only accessible by the web server
         maxAge: 3600000000,
       });
@@ -58,7 +58,11 @@ app.post("/api/user/login",async(req,res)=>{
       // res.send("Jai RadheKrishna");
   }
     
-
+app.get("/auth",async(req,res)=>{
+  if(req.user){
+    res.status(201)
+  }
+})
    
 
 });

@@ -14,6 +14,7 @@ from 'mdb-react-ui-kit';
 import Logo from './logo';
 import { Image } from '@chakra-ui/react'
 import "./log.css"
+import axios from 'axios'
 const App=()=> 
 {
     const [dp,setDp]=useState("images/transformation/image2.jpg")
@@ -92,14 +93,32 @@ const App=()=>
       //   method: 'GET',
       //   credentials: 'include'
       // });
-      fetch('http://localhost:3000/hogla', {
-        method: 'GET',
-        credentials: 'include'
-      }).then(response => {
-        console.log(response.status);
-      }).catch(error => {
-        console.error(error);
-      });
+      // fetch('http://localhost:3000/hogla', {
+      //   method: 'GET',
+      //   credentials: 'include'
+      // }).then(response => {
+      //   console.log(response.status);
+      // }).catch(error => {
+      //   console.error(error);
+      // });
+      axios.post("http://localhost:3000/api/user",{
+        data:{
+          name,
+          email,
+          password
+        }
+      },
+      {
+        withCredentials: true
+      }). then(response=>{
+        if(response.status=== 201){
+          console.log("success!")
+          alert("Success!")
+        }
+      })
+      .catch(error=>{
+        console.log(error)
+      })
     }
 
 
@@ -144,9 +163,7 @@ const App=()=>
               <MDBInput wrapperClass='mb-4'  id='form4' type='file'/>
               <MDBInput wrapperClass='mb-4' value={password} onChange={password_change}label='Password' id='form4' type='password'/>
 
-              <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-              </div>
+            
 
               <MDBBtn className='w-100 mb-4' onClick={signup_handle} size='md'>sign up</MDBBtn>
 

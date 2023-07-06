@@ -15,6 +15,7 @@ import {
   } from '@chakra-ui/react';
 import axios from 'axios'
 
+
 // import Logo from './logo';
 // import { Image } from '@chakra-ui/react'
 import "./log.css"
@@ -77,7 +78,7 @@ const App=()=>
         // handle the response
         if (response.status === 201) {
           // the cookie was created successfully, you can access it using document.cookie or a library like js-cookie
-          console.log("success!")
+          navigate("/home")
         }
       })
       .catch(error => {

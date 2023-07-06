@@ -3,7 +3,8 @@ const Member=require("../models/member");
 const generateToken = require("../config/generateToken");
 
 const memberRegister=async(req,res)=>{
-    const {name,password,email}=req.body;
+    const {name,password,email}=req.body.data;
+    console.log(name)
     if(!name || !password || !email){
         res.status(400);
         throw new Error("Please enter all the details");

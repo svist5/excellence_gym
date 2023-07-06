@@ -4,7 +4,7 @@ const Member =require("../models/member")
 const Authenticate=async(req,res,next)=>{
     try{
     // console.log(req.cookie.jwtoken)
-    const token=req.cookies.jwt;
+    const token=req.cookies.Haribol;
     // console.log("this is "+token)
     const verifyToken=jwt.verify(token,"johncena");
     // console.log("This is:\t"+verifyToken);
